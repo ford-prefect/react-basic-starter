@@ -2,6 +2,7 @@ module Components.App where
 
 import Prelude
 
+import Components.Counter (counter)
 import Components.Toggle (toggle)
 import React.Basic (Component, JSX, createComponent, makeStateless)
 import React.Basic.DOM as R
@@ -15,4 +16,5 @@ app = unit # makeStateless component \_ ->
     [ R.h1_ [ R.text "Hello world" ]
     , toggle { initialValue: true }
     , toggle { initialValue: false }
+    , counter { }
     ]
